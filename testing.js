@@ -2,6 +2,8 @@
 // the passed in array of numbers. If the 
 // function passes in an empty array or null/nil 
 // value then it should return an empty array.
+
+//Name - Number Sort
 const numbers = [1, 2, 3, 10, 5]
 function solution(nums) {
     let sortedArray = [];
@@ -22,4 +24,6 @@ function solution(nums) {
 }
 solution(numbers)
 // S O L V E D
+// -------------------------------------------------------------
+
 
