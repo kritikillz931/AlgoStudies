@@ -83,11 +83,11 @@ const rowWeights = (array) => {
 const values = [4, 7, 5, 7]
 const minValue = (values) => {
     let sortedArray = []
-//Remove duplicates from array and store in noDupes Variable
-//sort noDupes variable from lowest to highest and store in sortedArray array
-//convert sortedArray integers to a string, remove commas, and rejoin numbers as whole number
-//and store in str variable
-//convert string to integer and store in answer variable
+    //Remove duplicates from array and store in noDupes Variable
+    //sort noDupes variable from lowest to highest and store in sortedArray array
+    //convert sortedArray integers to a string, remove commas, and rejoin numbers as whole number
+    //and store in str variable
+    //convert string to integer and store in answer variable
     let noDupes = [...new Set(values)]
     sortedArray = noDupes.sort((a, b) => a - b)
     let str = sortedArray.toString().split(",").join("")
@@ -99,3 +99,24 @@ const minValue = (values) => {
 
 // ------------------------------S O L V E D------------------------------ \\
 
+// You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false. You can assume all values in the array are numbers.
+
+//Name - Small Enough?
+const a = [78, 117, 110, 99, 104, 117, 107, 115]
+const limit = 100
+const smallEnough = (a, limit) => {
+//setting current variable to true
+//iterate through the array and compare if less than or equal to limit
+//if less than or equal to, continue through the for loop
+//if value is greater than 100 change current value to false.
+    let current = true
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] <= limit) {
+            continue
+        } else {
+            current =  false
+        }
+    }
+    return current
+}
+smallEnough(a, limit)
