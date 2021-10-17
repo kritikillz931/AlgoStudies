@@ -8,12 +8,11 @@ const numbers = [1, 2, 3, 10, 5]
 function solution(nums) {
     let sortedArray = [];
     if (nums) {
-
         // if nums exist iterate through each number in the array by 1 index.                    
+        //push each number into the sortedArray
+        //sort each number from lowest to highest            
         for (let i = 0; i < nums.length; i++) {
-            //push each number into the sortedArray
             sortedArray.push(nums[i])
-            //sort each number from lowest to highest            
             sortedArray.sort((a, b) =>
                 a - b
             )
@@ -21,9 +20,9 @@ function solution(nums) {
     }
     return sortedArray;
 }
-solution(numbers)
-// S O L V E D
-// -------------------------------------------------------------
+//  solution(numbers)
+
+// ------------------------------S O L V E D------------------------------ \\
 
 
 // Given an integral number, determine if it's a square number
@@ -33,21 +32,19 @@ const n = [-1, 0, 3, 4, 25, 26]
 const squareNumbers = (n) => {
     let squareArray = [];
     //iterate through each number in n array
+    //if index of n is greater than or equal to 0 AND 
+    //the square root of index i is divisble by 1 with no
+    //remainders, then push that number to squareArray.
     for (let i = 0; i < n.length; i++) {
-        //if index of n is greater than or equal to 0 AND 
-        //the square root of index i is divisble by 1 with no
-        //remainders, then push that number to squareArray.
         if (n[i] >= 0 && Math.sqrt(n[i]) % 1 === 0) {
             squareArray.push(n[i])
         }
     }
-    console.log(squareArray)
     return squareArray
 }
-squareNumbers(n)
-//S O L V E D
-// -------------------------------------------------------------
+// squareNumbers(n)
 
+// ------------------------------S O L V E D------------------------------ \\
 
 // Given an array of positive integers (the weights of the people), 
 // return a new array/tuple of two integers, where the first one is 
@@ -75,6 +72,30 @@ const rowWeights = (array) => {
     teamWeights.push(teamTwoWeight)
     return teamWeights
 }
-rowWeights(array)
-//S O L V E D
-// -------------------------------------------------------------
+// rowWeights(array)
+
+// ------------------------------S O L V E D------------------------------ \\
+
+// Given a list of digits, return the smallest number that could be formed
+// from these digits, using the digits only once (ignore duplicates).
+
+//Name - Form the Minimum
+const values = [4, 7, 5, 7]
+const minValue = (values) => {
+    let sortedArray = []
+//Remove duplicates from array and store in noDupes Variable
+//sort noDupes variable from lowest to highest and store in sortedArray array
+//convert sortedArray integers to a string, remove commas, and rejoin numbers as whole number
+//and store in str variable
+//convert string to integer and store in answer variable
+    let noDupes = [...new Set(values)]
+    sortedArray = noDupes.sort((a, b) => a - b)
+    let str = sortedArray.toString().split(",").join("")
+    let answer = parseInt(str)
+
+    return answer
+}
+// minValue(values)
+
+// ------------------------------S O L V E D------------------------------ \\
+
