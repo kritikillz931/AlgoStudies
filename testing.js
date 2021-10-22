@@ -105,18 +105,42 @@ const minValue = (values) => {
 const a = [78, 117, 110, 99, 104, 117, 107, 115]
 const limit = 100
 const smallEnough = (a, limit) => {
-//setting current variable to true
-//iterate through the array and compare if less than or equal to limit
-//if less than or equal to, continue through the for loop
-//if value is greater than 100 change current value to false.
+    //setting current variable to true
+    //iterate through the array and compare if less than or equal to limit
+    //if less than or equal to, continue through the for loop
+    //if value is greater than 100 change current value to false.
     let current = true
     for (let i = 0; i < a.length; i++) {
         if (a[i] <= limit) {
             continue
         } else {
-            current =  false
+            current = false
         }
     }
     return current
 }
-smallEnough(a, limit)
+// smallEnough(a, limit)
+
+// ------------------------------S O L V E D------------------------------ \\
+
+// Make a program that filters a list of strings and returns a list with only your friends name in it. If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+//Name - Friend Or Foe?
+const friends = ["Ryan", "Kieran", "Mark"]
+let newArray = []
+const friend = (friends) => {
+
+// //iterate through each string in friends array. if strings character
+// length is equal to 4 characters then push it into the newArray. if not
+// ignore
+    friends.map(f => {
+        if (f.length == 4) {
+            newArray.push(f)
+        }
+    }
+    )
+    return newArray
+}
+// friend(friends)
+
+// ------------------------------S O L V E D------------------------------ \\
