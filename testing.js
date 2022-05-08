@@ -130,9 +130,9 @@ const friends = ["Ryan", "Kieran", "Mark"]
 let newArray = []
 const friend = (friends) => {
 
-// //iterate through each string in friends array. if strings character
-// length is equal to 4 characters then push it into the newArray. if not
-// ignore
+    // //iterate through each string in friends array. if strings character
+    // length is equal to 4 characters then push it into the newArray. if not
+    // ignore
     friends.map(f => {
         if (f.length == 4) {
             newArray.push(f)
@@ -142,5 +142,27 @@ const friend = (friends) => {
     return newArray
 }
 // friend(friends)
+
+// ------------------------------S O L V E D------------------------------ \\
+
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+//Name - Square(n) Sum
+const numbersToSquare = [1, 2, 2]
+function squareNum(numbersToSquare) {
+    let total = 0
+    let newArr = []
+    for (let i = 0; i < numbersToSquare.length; i++) {
+        sq = numbersToSquare[i] * numbersToSquare[i]
+        newArr.push(sq)
+        console.log(newArr)
+    }
+    for (let i in newArr) {
+        total += newArr[i]
+    }
+    console.log(total)
+    return total
+}
+// squareNum(numbersToSquare)
 
 // ------------------------------S O L V E D------------------------------ \\
