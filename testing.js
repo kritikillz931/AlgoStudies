@@ -175,8 +175,13 @@ function squareNum(numbersToSquare) {
 const array1 = [1, 1, 1]
 function find_average(array) {
     let average = []
-    let total = array.reduce(function(a, b) { return a + b})
-    average.push(total)
-    return average / array.length
-  }
+    let empArr = 0
+    if (array.length != 0) {
+        let total = array.reduce(function (a, b) { return a + b })
+        average.push(total)
+        return average / array.length
+    } else {
+        return empArr
+    }
+}
 //   find_average(array1)
