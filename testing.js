@@ -166,3 +166,17 @@ function squareNum(numbersToSquare) {
 // squareNum(numbersToSquare)
 
 // ------------------------------S O L V E D------------------------------ \\
+
+// Write a function which calculates the average of the numbers in a given list.
+// Note: Empty arrays should return 0.
+
+
+//Name Calculate Average
+const array1 = [1, 1, 1]
+function find_average(array) {
+    let average = []
+    let total = array.reduce(function(a, b) { return a + b})
+    average.push(total)
+    return average / array.length
+  }
+//   find_average(array1)
